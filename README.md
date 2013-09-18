@@ -1,6 +1,6 @@
 # Sidekiq::Delayed
 
-TODO: Write a gem description
+Sidekiq delayed extension for models instances (ActiveRecord, MongoID)
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    post = Post.find(1)
+
+To destroy in background
+
+    post.delay.destroy
 
 ## Contributing
 

@@ -4,20 +4,21 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sidekiq/delayed/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sidekiq-delayed"
+  spec.name          = 'sidekiq-delayed'
   spec.version       = Sidekiq::Delayed::VERSION
-  spec.authors       = ["Max Kazarin"]
-  spec.email         = ["maxkazargm@gmail.com"]
+  spec.authors       = ['Max Kazarin']
+  spec.email         = ['maxkazargm@gmail.com']
   spec.description   = %q{Sidekiq delayed extension}
   spec.summary       = %q{Sidekiq delayed extension for models instances}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.homepage      = ''
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency 'bundler', '~> 1.3'
+  spec.add_development_dependency 'rake'
+  spec.add_dependency 'sidekiq', '~> 2.6'
 end
